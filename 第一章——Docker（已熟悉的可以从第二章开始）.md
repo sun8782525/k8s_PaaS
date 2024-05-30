@@ -55,6 +55,19 @@
 # rm /etc/yum.repos.d/local.repo
 ~]#curl -o /etc/yum.repos.d/CentOS-Base.repo http://mirrors.aliyun.com/repo/Centos-7.repo
 ~]# yum install epel-release -y
+#卸载
+
+yum remove -y docker \
+  docker-client \
+  docker-client-latest \
+  docker-common \
+  docker-latest \
+  docker-latest-logrotate \
+  docker-logrotate \
+  docker-selinux \
+  docker-engine-selinux \
+  docker-engine
+
 # 安装docker包
 ~]# yum list docker --show-duplicates
 ~]# yum install -y yum-utils
